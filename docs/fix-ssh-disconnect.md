@@ -18,7 +18,7 @@ apt update && apt install -y screen wget curl sudo
 
 正常情况几秒钟就能完成安装。如果长时间无响应，通常是 `apt` 锁文件被其他进程占用。
 
-![卡住读秒的截图](images/解决%20SSH终端%20连接%20VPS服务器%20反复中断的问题-image.png)
+![卡住读秒的截图](../images/ssh-apt-error.png)
 
 报错信息通常长这样：
 

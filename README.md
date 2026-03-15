@@ -37,7 +37,7 @@
 3. 在 VPS 上搭建 **VPN 服务**（使用 [v2ray-agent](https://github.com/mack-a/v2ray-agent)）
 4. 把生成的订阅链接导入本地 **Clash**，开启 TUN 模式
 
-> 想了解这套方案的原理？→ [为什么要在 VPS 上配置 VPN 服务？](../为什么要在%20VPS%20上配置%20VPN%20服务？.md)
+> 想了解这套方案的原理？→ [为什么要在 VPS 上配置 VPN 服务？](docs/why-vps-vpn.md)
 
 ---
 
@@ -50,7 +50,7 @@
 
 注册 DMIT 无需手机号，直接用 Gmail 邮箱即可。
 
-![DMIT 购买页面](images/网络环境配置（最终版）-image-3.png)
+![DMIT 购买页面](images/dmit-purchase.png)
 
 根据你的本地网络选择「网络类型」。
 
@@ -76,7 +76,7 @@ DMIT 有三条产品线，按优化等级递进：
 
 访问 [meowvps.com/tools/ip-check](https://meowvps.com/tools/ip-check/)，输入服务器 IPv4 地址。
 
-> 想了解 IPv4 与 IPv6 的区别？→ [IPv4 和 IPv6 的区别](../IPv4%20和%20IPv6%20的区别/IPv4%20和%20IPv6%20的区别.md)
+> 想了解 IPv4 与 IPv6 的区别？→ [IPv4 和 IPv6 的区别](docs/ipv4-vs-ipv6.md)
 
 **方法二（服务器端，更全面）⭐**
 
@@ -100,7 +100,7 @@ bash <(curl -Ls https://IP.Check.Place) -I
 
 1. 在 DMIT 控制台点击 **Download**，下载 PEM 私钥文件
 
-   ![下载 PEM 文件](images/网络环境配置（最终版）-image.png)
+   ![下载 PEM 文件](images/pem-download.png)
 
 2. 把私钥文件移动到 SSH 目录（把 `你下载的文件夹名` 替换为实际文件夹名称）：
 
@@ -159,7 +159,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-
 
 脚本启动后，遇到 sudoers 相关提示选 **`N`**。
 
-![v2ray-agent 安装界面](images/网络环境配置（最终版）-image-1.png)
+![v2ray-agent 安装界面](images/v2ray-install.png)
 
 ### 3. 选择协议
 
@@ -167,7 +167,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-
 
 详细操作参考 [一键无域名版 Reality 安装教程](https://www.v2ray-agent.com/archives/1708584312877)
 
-> 🚨 **遇到 SSH 连接反复中断？** → [解决 SSH 终端连接 VPS 反复中断的问题](../解决%20SSH终端%20连接%20VPS服务器%20反复中断的问题/解决%20SSH终端%20连接%20VPS服务器%20反复中断的问题.md)
+> 🚨 **遇到 SSH 连接反复中断？** → [解决 SSH 终端连接 VPS 反复中断的问题](docs/fix-ssh-disconnect.md)
 
 ### 4. 获取订阅链接
 
@@ -204,7 +204,8 @@ url: http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
 2. 把复制好的订阅链接粘贴进去
 3. 点击「**导入**」
 
-![导入订阅成功](images/clash-import-subscription.png)
+![导入订阅成功](images/clash-import.png)
+
 ### 3. 开启 TUN 模式
 
 进入「**设置**」→ 找到「**TUN 模式**」→ 开启（需要输入系统密码授权）。
@@ -222,4 +223,4 @@ url: http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
 
 ---
 
-*遇到问题？欢迎在 Issues 里提问。*
+*遇到问题？欢迎在 [Issues](https://github.com/huasan2025/vps-vpn-clash-setup/issues) 里提问。*
