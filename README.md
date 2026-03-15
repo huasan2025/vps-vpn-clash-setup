@@ -32,7 +32,7 @@
 
 ## 整体思路
 
-1. 购买海外 **VPS** 云服务器（推荐 [DMIT](https://www.dmit.io/)）
+1. 购买海外 **VPS** 云服务器（推荐 [DMIT](https://www.dmit.io/aff.php?aff=19146)）
 2. 用 **SSH** 连接 VPS 服务器
 3. 在 VPS 上搭建 **VPN 服务**（使用 [v2ray-agent](https://github.com/mack-a/v2ray-agent)）
 4. 把生成的订阅链接导入本地 **Clash**，开启 TUN 模式
@@ -45,10 +45,12 @@
 
 推荐两个相对靠谱的 VPS 服务商：
 
-- [DMIT](https://www.dmit.io/aff.php?aff=19116)（本教程以此为例）
+- [DMIT](https://www.dmit.io/aff.php?aff=19146)（本教程以此为例）
 - [VMiss](https://app.vmiss.com/aff.php?aff=4666)
 
 注册 DMIT 无需手机号，直接用 Gmail 邮箱即可。
+
+> 💡 如果觉得本教程有帮助，购买时可以使用我的推广链接：[dmit.io/aff.php?aff=19146](https://www.dmit.io/aff.php?aff=19146)，对你没有任何额外费用。
 
 ![DMIT 购买页面](images/dmit-purchase.png)
 
