@@ -225,4 +225,14 @@ url: http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
 
 ---
 
+## 致谢
+
+本教程基于以下开源项目，感谢作者的贡献：
+
+- [v2ray-agent](https://github.com/mack-a/v2ray-agent) — VPN 服务端安装脚本
+- [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) — 本地代理客户端
+- [IPQuality](https://github.com/xykt/IPQuality) — IP 质量检测脚本
+
+---
+
 *遇到问题？欢迎在 [Issues](https://github.com/huasan2025/vps-vpn-clash-setup/issues) 里提问。*
