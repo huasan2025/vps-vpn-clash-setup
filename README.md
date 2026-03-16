@@ -74,23 +74,15 @@ DMIT 有三条产品线，按优化等级递进：
 
 买完先别急着配置，先检测这个 IP 是否干净。
 
-**方法一（网页版，快速）**
+**网页版快速检测**
 
 访问 [meowvps.com/tools/ip-check](https://meowvps.com/tools/ip-check/)，输入服务器 IPv4 地址。
 
 > 想了解 IPv4 与 IPv6 的区别？→ [IPv4 和 IPv6 的区别](docs/ipv4-vs-ipv6.md)
 
-**方法二（服务器端，更全面）⭐**
-
-SSH 登录服务器后（下一步会讲如何登录），执行：
-
-```bash
-bash <(curl -Ls https://IP.Check.Place) -I
-```
-
-检测内容包括：IP 风险评分、端口开放状态、流媒体解锁情况。
-
 💡 如果 IP 质量差，可以在 DMIT 提交工单申请换 IP；或在 3 天内、流量未超 3 GB 时申请退款。
+
+**更全面的检测** → 完成全部配置后，在第五步的「进阶验证」中可以用服务器端脚本检测 IP 风险评分、端口开放状态、流媒体解锁情况。
 
 ---
 
@@ -218,10 +210,28 @@ url: http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
 
 ## 第五步：验证配置是否成功
 
+### 基础验证
+
 1. 访问 [myip.com](https://myip.com)，确认显示的是你的 **VPS IP**，而非本地网络 IP
 2. 访问 [claude.ai](https://claude.ai)，确认可以正常打开
 
 两项都通过，配置完成 ✅
+
+### 进阶验证（可选）
+
+想要更全面地了解你的 IP 质量？
+
+SSH 登录服务器：
+```bash
+apt update && apt install -y wget curl sudo
+```
+
+检测 IP 质量：
+```bash
+bash <(curl -Ls https://IP.Check.Place) -I
+```
+
+检测内容包括：IP 风险评分、端口开放状态、流媒体解锁情况。
 
 ---
 
