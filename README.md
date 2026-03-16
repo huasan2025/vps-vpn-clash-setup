@@ -174,7 +174,7 @@ vasma
 依次选择 `7` → `2` → 一路回车，得到 **clashMeta 订阅链接**：
 
 ```
-url: http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
+http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
 ```
 
 复制这个完整 URL，下一步要用。
@@ -221,14 +221,18 @@ url: http://你的服务器IP:端口/s/clashMetaProfiles/xxxxxxxxxxxxxxxx
 
 想要更全面地了解你的 IP 质量？
 
-SSH 登录服务器：
+**1. SSH 登录服务器**
+
+把 `你的服务器IP` 替换为实际的 IPv4 地址：
+
 ```bash
-apt update && apt install -y wget curl sudo
+ssh -i ~/.ssh/id_rsa.pem root@你的服务器IP
 ```
 
-检测 IP 质量：
+**2. 执行 IP 质量检测**
+
 ```bash
-bash <(curl -Ls https://IP.Check.Place) -I
+bash <(curl -Ls IP.Check.Place)
 ```
 
 检测内容包括：IP 风险评分、端口开放状态、流媒体解锁情况。
